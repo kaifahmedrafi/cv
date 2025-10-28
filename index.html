@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaif Ahmed Rafi - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Glow buttons */
+    .btn-glow {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5;
+      transition: 0.3s ease-in-out;
+    }
+    .btn-glow:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #ff6ec4, 0 0 40px #7873f5;
+    }
+    /* Card hover effect */
+    .card-hover {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 25px rgba(255,110,196,0.5), 0 0 25px rgba(120,115,245,0.5);
+    }
+    /* Glowing cursor effect */
+    body {
+      cursor: none;
+    }
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      background: rgba(255,110,196,0.7);
+      box-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5;
+      transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+      z-index: 9999;
+    }
+    .cursor-hover {
+      width: 40px;
+      height: 40px;
+      background: rgba(120,115,245,0.7);
+      box-shadow: 0 0 20px #ff6ec4, 0 0 20px #7873f5;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans scroll-smooth">
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-center space-x-8 text-white">
+      <a href="#skills" class="hover:text-pink-400 transition cursor-pointer">Skills</a>
+      <a href="#projects" class="hover:text-green-400 transition cursor-pointer">Projects</a>
+      <a href="#about" class="hover:text-purple-400 transition cursor-pointer">About</a>
+      <a href="#resume" class="hover:text-yellow-400 transition cursor-pointer">Resume</a>
+      <a href="#contact" class="hover:text-blue-400 transition cursor-pointer">Hire Me</a>
+    </div>
+  </nav>
+
+ <!-- HERO SECTION -->
+<section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+  <div class="flex flex-col md:flex-row items-center gap-8">
+    <!-- Profile Picture -->
+    <img src="https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/477179797_122224728368027887_7804423836230331065_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH32Xz4bCfzrx4Uhrsve4XiLnIPdEN7uM4ucg90Q3u4zlNvSA4ukyXibRLT9k2YVQj6CmMZVaLGxswGHaWNgRFb&_nc_ohc=BgTEmqe7qAsQ7kNvwGnzx7T&_nc_oc=Adk3BKOYUOakOf25JCvcg1Ipq0KmOACNxRVRC1-AUsA2eOm3Ms50MxEwFl0JkGZjT-M&_nc_zt=23&_nc_ht=scontent.fdac14-1.fna&_nc_gid=FtMPKkn0trLfbgB1ZxXCMw&oh=00_AffnQQYdydq8hKxmT5B6tVcqVJf8gA3GQ2gGLLJWH8BANg&oe=69067BC6" alt="Kaif Ahmed Rafi" class="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-pink-400 shadow-lg">
+
+    <div class="text-center md:text-left">
+      <h1 class="text-6xl md:text-7xl font-bold mb-4 text-gradient">Kaif Ahmed Rafi</h1>
+      <p class="text-gray-300 text-xl md:text-2xl mb-8">Graphic & UI/UX Designer</p>
+      <div class="flex justify-center md:justify-start gap-4">
+        <a href="#projects" class="btn-glow cursor-target">View Projects</a>
+        <a href="#contact" class="btn-glow cursor-target">Hire Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-32 bg-gray-800 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-gradient">🛠 Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-pink-400 mb-2">UI Design</h3>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-green-400 mb-2">UX Research</h3>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Graphic Design</h3>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-yellow-400 mb-2">Web Design</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+<section id="projects" class="py-32 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12 text-gradient">💻 Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Project One -->
+      <a href="https://rafinahmed01631907603-alt.github.io/restaurant-/" target="_blank" class="block bg-gray-800 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+        <img src="image1.png" alt="Project 1" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-pink-400 mb-2">Project One</h3>
+        <p class="text-gray-300">A modern UI/UX project showcasing sleek design and user experience.</p>
+      </a>
+
+      <!-- Project Two -->
+      <a href="https://rafinahmed01631907603-alt.github.io/My_First_Project/" target="_blank" class="block bg-gray-800 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1259679_8-2ab6a74.jpg?quality=90&resize=440,400/350x200" alt="Project 2" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-green-400 mb-2">Project Two</h3>
+        <p class="text-gray-300">Creative graphic design project highlighting modern visual elements.</p>
+      </a>
+
+      <!-- Project Three -->
+      <a href="https://example.com/project3" target="_blank" class="block bg-gray-800 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+        <img src="https://i.ytimg.com/vi/ByCzQ6dGJrc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCRndXO7RLB3EE7HnDX_pgQJBincA/350x200" alt="Project 3" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">Project Three</h3>
+        <p class="text-gray-300">Responsive web design project optimized for mobile and desktop.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- ABOUT SECTION -->
+<section id="about" class="py-32 bg-gray-800 text-white">
+  <div class="container mx-auto px-6 text-center md:text-left">
+    <h2 class="text-4xl font-bold mb-12 text-gradient">👋 About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+      <!-- Profile Picture -->
+      <img src="https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/475743640_122222800430027887_7501494361159947233_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGpP-KDRLjNDm_HzKdu7Xlf1hebvcG4xWXWF5u9wbjFZdGuvjxFUtlPwaGUgFsUOLruGg5p-5DX2BcdIB8q8zCW&_nc_ohc=hQRbrdKnY3YQ7kNvwGqEW-9&_nc_oc=AdlqBNkwYj7kcIgdJyTtFeoG_r8r1rCUk-jOvkhDNPZmq7QHXr-ij5DVlbjX1sZ-f-U&_nc_zt=23&_nc_ht=scontent.fdac14-1.fna&_nc_gid=aJrWP4jwDZvJZQIOt5O8CQ&oh=00_AfcXLPXaJJjKvVdXfwP1TkcLlYxtpeO7uVae8EuXBi9FVg&oe=690681CC" alt="Kaif Ahmed Rafi" class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-purple-400 shadow-lg">
+
+      <div class="text-gray-300 text-lg md:text-xl space-y-6">
+        <p>Hi! I'm <span class="text-pink-400 font-semibold">KAIF AHMED RAFI</span>, a passionate Graphic & UI/UX Designer. I craft beautiful, user-friendly digital experiences, blending creativity and functionality.</p>
+        <p>With experience in web and graphic design, I enjoy turning complex ideas into clean, modern visuals. I focus on design that connects brands with people effectively.</p>
+        <p>My goal is to deliver unique, high-quality designs that leave lasting impressions and elevate user experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- RESUME & EDUCATION SECTION -->
+  <section id="resume" class="py-32 bg-gray-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-green-400">📄 Resume & Education</h2>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-pink-400 mb-3">Experience</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>UI/UX Designer at Creative Studio (2023–Present)</li>
+            <li>Freelance Graphic Designer (2021–2023)</li>
+            <li>Intern at WebTech Agency (2020–2021)</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg card-hover cursor-target">
+          <h3 class="text-xl font-semibold text-green-400 mb-3">Education</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Bachelor in Graphic Design – XYZ University (2019–2023)</li>
+            <li>High School – ABC College (2017–2019)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-32 bg-gray-800 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-gradient">📬 Hire Me / Contact</h2>
+      <p class="text-gray-300 mb-10 max-w-2xl mx-auto">I’m open to freelance projects, collaborations, or full-time opportunities. Let’s create something amazing together!</p>
+      
+      <form class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name" class="p-4 rounded-xl bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-pink-400 transition cursor-target">
+        <input type="email" placeholder="Your Email" class="p-4 rounded-xl bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-green-400 transition cursor-target">
+        <input type="text" placeholder="Subject" class="p-4 rounded-xl bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-purple-400 transition md:col-span-2 cursor-target">
+        <textarea placeholder="Message" rows="5" class="p-4 rounded-xl bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-yellow-400 transition md:col-span-2 cursor-target"></textarea>
+        <button type="submit" class="btn-glow md:col-span-2 cursor-target">Send Message</button>
+      </form>
+      
+      <div class="mt-10 flex justify-center space-x-6 text-gray-400">
+        <a href="https://www.linkedin.com/in/muhammad-kaif-ahmed-rafi-859709291/" class="hover:text-pink-400 transition cursor-target">LinkedIn</a>
+        <a href="https://github.com/rafinahmed01631907603-alt" class="hover:text-green-400 transition cursor-target">GitHub</a>
+        <a href="https://www.facebook.com/kaifahmed4200" class="hover:text-blue-400 transition cursor-target">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Custom glowing cursor effect
+    const cursor = document.getElementById('cursor');
+    const targets = document.querySelectorAll('.cursor-target');
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    targets.forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    });
+  </script>
+
+</body>
+</html>
